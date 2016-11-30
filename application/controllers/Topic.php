@@ -77,7 +77,7 @@ class Topic extends CI_Controller {
 					$CKEditorFuncNum = $this->input->get('CKEditorFuncNum');
 					$data = $this->upload->data();
 					$filename = $data['file_name'];
-					$url = '/codeigniter/static/user/'.$filename;
+					$url = '/static/user/'.$filename;
 					echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction('".$CKEditorFuncNum."', '".$url."', '전송에 성공 했습니다.')</script>";
 					//var_dump($data);
 			}
