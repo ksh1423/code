@@ -10,7 +10,7 @@
 
 			    <!-- Bootstrap -->
 
-			    <link href="/codeigniter/static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+			    <link href="/static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
 			    <style>
 
@@ -28,7 +28,7 @@
 
 			    </style>
 
-			    <link href="/codeigniter/static/lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">			    
+			    <link href="/static/lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">			    
 
             </head>
 
