@@ -97,7 +97,7 @@ class Topic extends CI_Controller {
         $this->load->view('head');
         $topics = $this->topic_model->gets();
 		var_dump($this->session->all_userdata());
-		var_dump($this->session->userdata('GOOD_SHOP_USERID'));
+		echo $this->session->userdata('GOOD_SHOP_USERID');
         $this->load->view('topic_list', array('topics'=>$topics));
     }
 }
