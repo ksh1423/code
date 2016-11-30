@@ -96,19 +96,9 @@ class Topic extends MY_Controller {
 
 
     function _head(){
-<<<<<<< HEAD
         $this->load->config('opentutorials');
         $this->load->view('head');
         $topics = $this->topic_model->gets();
-=======
-		
-
-        $this->load->config('opentutorials');
-        $this->load->view('head');
-        $topics = $this->topic_model->gets();
-		var_dump($this->session->all_userdata());
-		echo $this->session->userdata('GOOD_SHOP_USERID');
->>>>>>> 03a85dd39ef108fec29e8f139e9f4bc4d3b58b38
         $this->load->view('topic_list', array('topics'=>$topics));
     }
 }
