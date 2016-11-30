@@ -1,10 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class Topic extends CI_Controller {
+class Topic extends MY_Controller {
     function __construct()
     {       
         parent::__construct();
         $this->load->database();
         $this->load->model('topic_model');
+	    if(!$this->session->userdata('is_login')){
+        $this->load->helper('url');
+        redirect('http://www.urban114.com');
+	    }
         log_message('debug', 'topic 초기화');
     }
     function index(){        
@@ -31,6 +35,7 @@ class Topic extends CI_Controller {
         $this->load->view('footer');
     }
     function add(){
+
         $this->_head();
          
         $this->load->library('form_validation');
@@ -91,12 +96,9 @@ class Topic extends CI_Controller {
 
 
     function _head(){
-		//$this->session->set_userdata('session_test','ksh1423');
-
         $this->load->config('opentutorials');
         $this->load->view('head');
         $topics = $this->topic_model->gets();
-		var_dump($this->session->all_userdata());
         $this->load->view('topic_list', array('topics'=>$topics));
     }
 }
