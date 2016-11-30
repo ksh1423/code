@@ -91,12 +91,13 @@ class Topic extends CI_Controller {
 
 
     function _head(){
-		//$this->session->set_userdata('session_test','ksh1423');
+		
 
         $this->load->config('opentutorials');
         $this->load->view('head');
         $topics = $this->topic_model->gets();
 		var_dump($this->session->all_userdata());
+		var_dump($this->session->userdata('GOOD_SHOP_USERID'));
         $this->load->view('topic_list', array('topics'=>$topics));
     }
 }
